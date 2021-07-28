@@ -1,0 +1,50 @@
+main {
+    @include mobile-only;
+   
+
+}
+.container-about{
+    width: 100%;
+    background-color: $color-bg;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+}
+.presentation{
+    text-align: center;
+    padding: 0px 30px;
+        & h2, p{
+       margin: 10px; 
+    }
+    }
+  .container_1, .container_2{
+      width: 100%;
+      .title-container{
+          @include flex__title;
+          padding: 0px 10px;
+      }
+  }
+
+  .menu{
+    @include flex__center;
+    font-weight:bold;
+
+    & .pick, .choose, .eat{
+        @include cards-menu;
+        @include shadow-cards;
+    }
+    & .icon__gps{
+        @include icon_gps;
+    }
+    }
+    .restaurants{
+        background-color: $color-bg;
+        @include flex__center
+    }
+    .article{
+        @include cards-restaurant;
+    }
+

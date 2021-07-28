@@ -1,0 +1,16 @@
+header{
+   text-align: center;
+   background: $white;
+   @include mobile-only;
+} 
+.gps{
+    background-color: $gps;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .icon__gps{
+        @include icon_gps
+    }
+    @include shadow-gps;
+}

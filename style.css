@@ -1,5 +1,166 @@
-body {
+/**** couleurs ****/
+/**** fonts ****/
+/**** Breakpoints ****/
+/**** mixin pour les breakpoints ****/
+/**** mixin box-shadows ****/
+/**** mixins flexbox ****/
+/**** mixin cards ****/
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  cursor: pointer;
+}
+
+.logo, h2 {
+  font-family: "Shrinkhand", Verdana, Sans-Serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+p, h3 {
+  font-family: "Roboto", Verdana, Sans-Serif;
+  font-size: 1rem;
+}
+
+.btn {
+  background: from #ff79da;
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  color: #fff;
+  padding: 15px;
+  margin-top: 10px;
+  font-family: "Roboto", Verdana, Sans-Serif;
+  border: none;
+  border-color: transparent;
+  width: 250px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+.btn:hover {
+  opacity: 0.7;
+}
+
+header {
+  text-align: center;
   background: #fff;
+}
+@media screen and (max-width: 599px) {
+  header {
+    width: 100%;
+  }
+}
+
+.gps {
+  background-color: #E4E4E4;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.2);
+}
+.gps .icon__gps {
+  margin: 10px 20px;
+}
+
+@media screen and (max-width: 599px) {
+  main {
+    width: 100%;
+  }
+}
+
+.container-about {
+  width: 100%;
+  background-color: #F2F2F2;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.presentation {
+  text-align: center;
+  padding: 0px 30px;
+}
+.presentation h2, .presentation p {
+  margin: 10px;
+}
+
+.container_1, .container_2 {
+  width: 100%;
+}
+.container_1 .title-container, .container_2 .title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 10px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.menu .pick, .menu .choose, .menu .eat {
+  border-radius: 1rem;
+  background-color: #F2F2F2;
+  border: none;
+  padding: 10px 60px;
+  margin: 10px;
+  width: 90%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+.menu .icon__gps {
+  margin: 10px 20px;
+}
+
+.restaurants {
+  background-color: #F2F2F2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.article {
+  background-color: #fff;
+  border-radius: 1rem;
+  width: 28rem;
+  height: 18rem;
+  margin: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+.article img {
+  border-radius: 1rem 1rem 0rem 0rem;
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+.article .card-text {
+  padding: 0px 10px;
+}
+.articleh3 {
+  font-weight: 700;
+}
+
+.footer {
+  background-color: #353535;
+  color: #fff;
+}
+.footer P, .footer .icon__gps {
+  margin: 10px 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
