@@ -36,12 +36,12 @@
     border-radius: 1rem;
     background-color: $color-bg;
     border: none;
-    padding: 10px 60px;
+    padding: 0px 60px;
     margin: 10px;
     width: 90%;
 }
 @mixin icon_gps {
-    margin: 10px 20px;
+    margin: 0px 10px;
 }
 
 @mixin cards-restaurant{
@@ -58,9 +58,43 @@
         object-fit: cover;
     }
     & .card-text{
-        padding: 0px 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 20px;
+        color: #000;
     }
-    &h3{
-        font-weight: 700;
+    span{
+        display: flex;
+        align-items: baseline;
+        font-size: 1.3rem;
+        padding: 20px 0;
     }
 }
+/**** page menu ****/
+@mixin menu--card {
+
+    .bloc-menu{
+        border-radius: 1rem;
+        background-color: $white;
+        border: none;
+        margin: 10px 0px;
+        padding: 15px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    }
+    @mixin description {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       
+
+       
+        & h5, p{
+            margin: 0px;
+        }
+        
+    }
+    

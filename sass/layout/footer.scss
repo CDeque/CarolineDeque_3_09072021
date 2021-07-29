@@ -1,9 +1,16 @@
 .footer{
     background-color: $color-footer;
     color: $white;
+    display: flex;
+    flex-direction: column;
     
     & P, .icon__gps{
         
         @include icon_gps;
     }
+}
+.logo__footer{
+    filter: invert(100%);
+    width: 20%;
+    margin: 25px;
 }

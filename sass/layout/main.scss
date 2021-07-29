@@ -6,6 +6,7 @@ main {
 .container-about{
     width: 100%;
     background-color: $color-bg;
+   
 }
 .about{
     display: flex;
@@ -35,6 +36,11 @@ main {
     & .pick, .choose, .eat{
         @include cards-menu;
         @include shadow-cards;
+        &:hover{
+            background-color: $primary;
+
+            opacity: 0.7;
+        }
     }
     & .icon__gps{
         @include icon_gps;
@@ -47,4 +53,60 @@ main {
     .article{
         @include cards-restaurant;
     }
+
+    /**** pages menu ****/
+    .header .main .footer{
+        @include mobile-only;
+     } 
+     .header{
+        background-color: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & .arrow{
+            position: absolute;
+            left: 30px;
+            font-size: 1.5rem;
+           top: 2%;
+           color: #000;
+        }
+        }
+        img{
+            width: 100%;
+            object-fit: cover;
+            
+        }
+.restaurant-card{
+    z-index: 1;
+    margin-top: -4rem;
+    position: relative ;
+    background-color: $color-bg;
+    border-radius: 2rem 2rem 0rem 0rem;
+    padding: 10px 20px;
+    width: 100%;
+    .title-heart{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        & .heart{
+            font-size: 1.6em;
+        }
+    }    
+    .menu-card{
+        @include menu--card;
+    }
+    .description{
+        @include description;
+    }
+}
+.menu-title h5{
+    border-bottom: solid 3px $terciary;
+    width: 13%;
+}
+.btn-command{
+    display: flex;
+    justify-content: center;
+}
 

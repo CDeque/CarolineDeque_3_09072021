@@ -1,16 +1,23 @@
-header{
+.header{
+    display: flex;
+    flex-direction: column;
    text-align: center;
    background: $white;
-   @include mobile-only;
+
 } 
+.logo{
+    padding: 10px;
+}
 .gps{
     background-color: $gps;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: 100%;
     .icon__gps{
-        @include icon_gps
+        @include icon_gps;
+        
     }
     @include shadow-gps;
 }

@@ -5,6 +5,7 @@
 /**** mixin box-shadows ****/
 /**** mixins flexbox ****/
 /**** mixin cards ****/
+/**** page menu ****/
 html, body {
   margin: 0;
   padding: 0;
@@ -17,17 +18,37 @@ html, body {
 
 a {
   cursor: pointer;
+  text-decoration: none;
+  color: #fff;
 }
 
 .logo, h2 {
-  font-family: "Shrinkhand", Verdana, Sans-Serif;
+  font-family: "Roboto", Verdana, Sans-Serif;
   font-size: 1.5rem;
   font-weight: bold;
 }
 
-p, h3 {
+h1 {
+  font-family: "Shrikhand", Verdana, Sans-Serif;
+  font-size: 1.7rem;
+  font-style: italic;
+}
+
+p, span {
   font-family: "Roboto", Verdana, Sans-Serif;
   font-size: 1rem;
+}
+
+h3 {
+  font-family: "Roboto", Verdana, Sans-Serif;
+  font-size: 1rem;
+  margin: 0px 0px 10px 0px;
+}
+
+h5 {
+  font-family: "Roboto", Verdana, Sans-Serif;
+  font-size: 1.3rem;
+  font-weight: normal;
 }
 
 .btn {
@@ -48,14 +69,15 @@ p, h3 {
   opacity: 0.7;
 }
 
-header {
+.header {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   background: #fff;
 }
-@media screen and (max-width: 599px) {
-  header {
-    width: 100%;
-  }
+
+.logo {
+  padding: 10px;
 }
 
 .gps {
@@ -64,10 +86,11 @@ header {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  width: 100%;
   box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.2);
 }
 .gps .icon__gps {
-  margin: 10px 20px;
+  margin: 0px 10px;
 }
 
 @media screen and (max-width: 599px) {
@@ -117,13 +140,17 @@ header {
   border-radius: 1rem;
   background-color: #F2F2F2;
   border: none;
-  padding: 10px 60px;
+  padding: 0px 60px;
   margin: 10px;
   width: 90%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
 }
+.menu .pick:hover, .menu .choose:hover, .menu .eat:hover {
+  background-color: #9356DC;
+  opacity: 0.7;
+}
 .menu .icon__gps {
-  margin: 10px 20px;
+  margin: 0px 10px;
 }
 
 .restaurants {
@@ -149,18 +176,106 @@ header {
   object-fit: cover;
 }
 .article .card-text {
-  padding: 0px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 20px;
+  color: #000;
 }
-.articleh3 {
-  font-weight: 700;
+.article span {
+  display: flex;
+  align-items: baseline;
+  font-size: 1.3rem;
+  padding: 20px 0;
+}
+
+/**** pages menu ****/
+@media screen and (max-width: 599px) {
+  .header .main .footer {
+    width: 100%;
+  }
+}
+
+.header {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .arrow {
+  position: absolute;
+  left: 30px;
+  font-size: 1.5rem;
+  top: 2%;
+  color: #000;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.restaurant-card {
+  z-index: 1;
+  margin-top: -4rem;
+  position: relative;
+  background-color: #F2F2F2;
+  border-radius: 2rem 2rem 0rem 0rem;
+  padding: 10px 20px;
+  width: 100%;
+}
+.restaurant-card .title-heart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.restaurant-card .title-heart .heart {
+  font-size: 1.6em;
+}
+.restaurant-card .menu-card .bloc-menu {
+  border-radius: 1rem;
+  background-color: #fff;
+  border: none;
+  margin: 10px 0px;
+  padding: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.restaurant-card .description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.restaurant-card .description h5, .restaurant-card .description p {
+  margin: 0px;
+}
+
+.menu-title h5 {
+  border-bottom: solid 3px #99E2D0;
+  width: 13%;
+}
+
+.btn-command {
+  display: flex;
+  justify-content: center;
 }
 
 .footer {
   background-color: #353535;
   color: #fff;
+  display: flex;
+  flex-direction: column;
 }
 .footer P, .footer .icon__gps {
-  margin: 10px 20px;
+  margin: 0px 10px;
+}
+
+.logo__footer {
+  filter: invert(100%);
+  width: 20%;
+  margin: 25px;
 }
 
 /*# sourceMappingURL=style.css.map */
