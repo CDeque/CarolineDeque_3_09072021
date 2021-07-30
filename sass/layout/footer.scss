@@ -3,14 +3,21 @@
     color: $white;
     display: flex;
     flex-direction: column;
+    padding: 10px 20px;
     
     & P, .icon__gps{
-        
-        @include icon_gps;
+        padding-right: 10px;
+       margin: 5px 0px;
+     
     }
 }
+i{
+    width: 23px;
+    height: 16px;    
+}
+/**** changement couleur logo ****/
 .logo__footer{
     filter: invert(100%);
     width: 20%;
-    margin: 25px;
+    margin: 20px 0px;
 }

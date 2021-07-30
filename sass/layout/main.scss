@@ -25,7 +25,7 @@ main {
       width: 100%;
       .title-container{
           @include flex__title;
-          padding: 0px 10px;
+          padding: 0px 20px;
       }
   }
 
@@ -39,7 +39,7 @@ main {
         &:hover{
             background-color: $primary;
 
-            opacity: 0.7;
+            opacity: 0.5;
         }
     }
     & .icon__gps{
@@ -77,6 +77,16 @@ main {
             object-fit: cover;
             
         }
+        .bloc-card{
+            Animation-name : fadein ;
+            Animation-delay : 0s ;
+            Animation-duration : 5s ;
+            Animation-direction:normale;
+            Animation-iteration-count : 1;
+            }
+            .restaurants{
+                padding: 0px 20Px;
+            }
 .restaurant-card{
     z-index: 1;
     margin-top: -4rem;
