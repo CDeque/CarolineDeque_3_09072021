@@ -21,6 +21,18 @@ main {
        margin: 10px; 
     }
     }
+    .number{
+        float: left;
+        background-color: $primary;
+        color: $white;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        border-radius: 50%;
+        text-align: center;
+        margin-left: -70px;
+
+    }
   .container_1, .container_2{
       width: 100%;
       .title-container{
@@ -83,7 +95,7 @@ main {
             Animation-name : fadein ;
             Animation-delay : 0s ;
             Animation-duration : 5s ;
-            Animation-direction:normale;
+            Animation-direction: normale;
             Animation-iteration-count : 1;
             }
             .restaurants{
@@ -115,7 +127,7 @@ main {
 }
 .menu-title h5{
     border-bottom: solid 3px $terciary;
-    width: 13%;
+    width: 10%;
 }
 .btn-command{
     display: flex;
