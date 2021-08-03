@@ -301,10 +301,36 @@ img {
 .restaurant-card .description h5, .restaurant-card .description p {
   margin: 0px;
 }
+.restaurant-card .bloc-menu .rotate-on-hover {
+  display: none;
+}
+.restaurant-card .bloc-menu:hover .rotate-on-hover {
+  display: block;
+  transform: rotate(360deg);
+  background-color: #99E2D0;
+}
+.restaurant-card .bloc-menu:hover .rotate-on-hover.fa-check-circle {
+  background-color: #99E2D0;
+  color: #fff;
+  font-size: 30px;
+  border-radius: 0 1rem 1rem 0;
+  width: 4.5rem;
+  height: 4.9rem;
+  text-align: center;
+  line-height: 81px;
+  position: absolute;
+  top: 17%;
+  right: 20px;
+}
+.restaurant-card .check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .menu-title h5 {
   border-bottom: solid 3px #99E2D0;
-  width: 10%;
+  width: 50px;
 }
 
 .btn-command {

@@ -124,10 +124,39 @@ main {
     .description{
         @include description;
     }
+    .bloc-menu .rotate-on-hover{
+        display: none;
+    
+    }
+    .bloc-menu:hover .rotate-on-hover{
+        display: block;
+        transform: rotate(360deg);
+        background-color: $terciary;
+        &.fa-check-circle{
+            background-color: #99E2D0;
+            color: #fff;
+            font-size: 30px;
+            border-radius: 0 1rem 1rem 0;
+            width: 4.5rem;
+            height: 4.9rem;
+            text-align: center;
+            line-height: 81px;
+            position: absolute;
+            top: 17%;
+            right: 20px;
+
+        
+        }
+    }
+    .check{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 .menu-title h5{
     border-bottom: solid 3px $terciary;
-    width: 10%;
+    width: 50px;
 }
 .btn-command{
     display: flex;
