@@ -37,15 +37,17 @@ main {
         @include cards-menu;
         @include shadow-cards;
         &:hover{
-            background-color: $primary;
+            background-color: lighten($primary, 30%)
 
-            opacity: 0.5;
         }
     }
-    & .icon__gps{
-        @include icon_gps;
     }
-    }
+    .icons{
+            @include icons;   
+            &:hover{
+                color: $primary;
+            }
+        }
     .restaurants{
         background-color: $color-bg;
         @include flex__center
@@ -69,7 +71,7 @@ main {
             left: 30px;
             font-size: 1.5rem;
            top: 2%;
-           color: #000;
+           color:$icons;
         }
         }
         img{

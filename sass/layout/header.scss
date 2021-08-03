@@ -15,8 +15,8 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    .icon__gps{
-        @include icon_gps;
+    .icons{
+        @include icons;
         
     }
     @include shadow-gps;

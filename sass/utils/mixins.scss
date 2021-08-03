@@ -40,8 +40,9 @@
     margin: 10px;
     width: 90%;
 }
-@mixin icon_gps {
+@mixin icons{
     margin: 0px 10px;
+    color: $icons;
 }
 
 @mixin cards-restaurant{
