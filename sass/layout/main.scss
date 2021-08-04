@@ -67,7 +67,7 @@ main {
     .article{
         @include cards-restaurant;
     }
-
+   
     /**** pages menu ****/
     .header .main .footer{
         @include mobile-only;
@@ -93,10 +93,12 @@ main {
         }
         .bloc-card{
             Animation-name : fadein ;
-            Animation-delay : 0s ;
             Animation-duration : 5s ;
             Animation-direction: normale;
             Animation-iteration-count : 1;
+            .meal-1 .meal-2 .meal-3{
+                animation-delay: 2s;
+            }
             }
             .restaurants{
                 padding: 0px 20Px;
@@ -135,27 +137,33 @@ main {
     justify-content: flex-end;
     align-items: flex-end;
     padding: 0 15px 10px 0;
+    
 }
- .bloc-menu:hover .check-box,.rotate-on-hover{
+ .bloc-menu:hover .check-box{
+    @include flex__center;
+    animation: slide-left 1s ease ;
+    transform-origin: right;
+   
+    .rotate-on-hover{
+        animation: rotation-check 1s ease ;
+    }
+
+}
+    
+
+.check-box{
+    display: none;
     background-color: $terciary;
     color: $white;
-    display: flex;
     border-radius: 0 1rem 1rem 0;
     height: 80px;
     width: 60px;
     padding: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 30px;
-
-    i.fas.fa-check-circle.rotate-on-hover{
+    .rotate-on-hover{
         height: 30px;
         width: 30px;
     }
-}
-.check-box, .rotate-on-hover{
-    display: none;
 }
 .btn-command{
     display: flex;

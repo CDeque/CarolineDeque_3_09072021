@@ -1,4 +1,17 @@
+@keyframes heart-full{
+    
+    0%{
+        transform: scaleY(0);
+    }
+    50%{
+        transform: scaleY(0.5);
+    }
+    100%{
+        transform: scaleY(1.0);
+    }
+}
 @keyframes fadein{
+    
     from{
         opacity: 0;
     }
@@ -14,5 +27,23 @@
     .meal-3{
         transition-delay: 7s;
     }
+    
+  @keyframes slide-left {
+      from{
+          transform: scaleX(0)
+      }
+      to{
+          transform: scalex(-50px);
+      }
+      
+  }
+  @keyframes rotation-check {
+      from{
+          transform: rotate(0deg);
+      }
+      to{
+          transform: rotate(360deg);
+      }
+  }
 
 

@@ -10,6 +10,17 @@ h5, p {
   margin: 0px;
 }
 
+@keyframes heart-full {
+  0% {
+    transform: scaleY(0);
+  }
+  50% {
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
 @keyframes fadein {
   from {
     opacity: 0;
@@ -30,6 +41,22 @@ h5, p {
   transition-delay: 7s;
 }
 
+@keyframes slide-left {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scalex(-50px);
+  }
+}
+@keyframes rotation-check {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 html, body {
   margin: 0;
   padding: 0;
@@ -178,7 +205,7 @@ h5 {
   border-radius: 1rem;
   background-color: #F2F2F2;
   border: none;
-  padding: 0px 60px;
+  padding: 20px 60px;
   margin: 10px;
   width: 90%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
@@ -224,11 +251,31 @@ h5 {
   padding: 10px 20px;
   color: #000;
 }
-.article span {
+.article .empty-heart {
   display: flex;
   align-items: baseline;
-  font-size: 1.3rem;
+  font-size: 2em;
   padding: 20px 0;
+  width: 32px;
+  height: 32px;
+}
+.article .full-heart {
+  opacity: 0;
+  display: flex;
+  align-items: baseline;
+  font-size: 2em;
+  margin: -20px 0;
+  width: 32px;
+  height: 32px;
+  background: -webkit-linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.article .full-heart:hover {
+  opacity: 1;
+}
+.article .full-heart:hover.empty-heart {
+  opacity: 0;
 }
 
 /**** pages menu ****/
@@ -259,10 +306,12 @@ img {
 
 .bloc-card {
   Animation-name: fadein;
-  Animation-delay: 0s;
   Animation-duration: 5s;
   Animation-direction: normale;
   Animation-iteration-count: 1;
+}
+.bloc-card .meal-1 .meal-2 .meal-3 {
+  animation-delay: 2s;
 }
 
 .restaurants {
@@ -318,26 +367,31 @@ img {
   padding: 0 15px 10px 0;
 }
 
-.bloc-menu:hover .check-box, .rotate-on-hover {
+.bloc-menu:hover .check-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: slide-left 1s ease;
+  transform-origin: right;
+}
+.bloc-menu:hover .check-box .rotate-on-hover {
+  animation: rotation-check 1s ease;
+}
+
+.check-box {
+  display: none;
   background-color: #99E2D0;
   color: #fff;
-  display: flex;
   border-radius: 0 1rem 1rem 0;
   height: 80px;
   width: 60px;
   padding: 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 30px;
 }
-.bloc-menu:hover .check-box i.fas.fa-check-circle.rotate-on-hover, .rotate-on-hover i.fas.fa-check-circle.rotate-on-hover {
+.check-box .rotate-on-hover {
   height: 30px;
   width: 30px;
-}
-
-.check-box, .rotate-on-hover {
-  display: none;
 }
 
 .btn-command {
