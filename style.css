@@ -6,6 +6,10 @@
 /**** mixins flexbox ****/
 /**** mixin cards ****/
 /**** page menu ****/
+h5, p {
+  margin: 0px;
+}
+
 @keyframes fadein {
   from {
     opacity: 0;
@@ -288,49 +292,52 @@ img {
   background-color: #fff;
   border: none;
   margin: 10px 0px;
-  padding: 15px;
+  padding: 0px;
   width: 100%;
   display: flex;
-  flex-direction: column;
-}
-.restaurant-card .description {
-  display: flex;
   justify-content: space-between;
-  align-items: center;
-}
-.restaurant-card .description h5, .restaurant-card .description p {
-  margin: 0px;
-}
-.restaurant-card .bloc-menu .rotate-on-hover {
-  display: none;
-}
-.restaurant-card .bloc-menu:hover .rotate-on-hover {
-  display: block;
-  transform: rotate(360deg);
-  background-color: #99E2D0;
-}
-.restaurant-card .bloc-menu:hover .rotate-on-hover.fa-check-circle {
-  background-color: #99E2D0;
-  color: #fff;
-  font-size: 30px;
-  border-radius: 0 1rem 1rem 0;
-  width: 4.5rem;
-  height: 4.9rem;
-  text-align: center;
-  line-height: 81px;
-  position: absolute;
-  top: 17%;
-  right: 20px;
-}
-.restaurant-card .check {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .menu-title h5 {
   border-bottom: solid 3px #99E2D0;
   width: 50px;
+}
+
+.description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.price {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 0 15px 10px 0;
+}
+
+.bloc-menu:hover .check-box, .rotate-on-hover {
+  background-color: #99E2D0;
+  color: #fff;
+  display: flex;
+  border-radius: 0 1rem 1rem 0;
+  height: 80px;
+  width: 60px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+.bloc-menu:hover .check-box i.fas.fa-check-circle.rotate-on-hover, .rotate-on-hover i.fas.fa-check-circle.rotate-on-hover {
+  height: 30px;
+  width: 30px;
+}
+
+.check-box, .rotate-on-hover {
+  display: none;
 }
 
 .btn-command {

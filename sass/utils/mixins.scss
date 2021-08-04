@@ -80,22 +80,21 @@
         background-color: $white;
         border: none;
         margin: 10px 0px;
-        padding: 15px;
+        padding: 0px;
         width: 100%;
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
     }
+
     }
     @mixin description {
         display: flex;
         justify-content: space-between;
         align-items: center;
-       
-
-       
-        & h5, p{
-            margin: 0px;
-        }
-        
+        flex-direction: column;
+        padding: 10px;
     }
     
+    h5, p{
+        margin: 0px;
+    }
