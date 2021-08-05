@@ -56,7 +56,8 @@
         border-radius: 1rem 1rem 0rem 0rem;
         width: 100%;
         height: 70%;
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
     }
     & .card-text{
         display: flex;
@@ -66,6 +67,7 @@
         color: #000;
     }
     .empty-heart{
+        opacity: 1;
         display: flex;
         align-items: baseline;
         font-size: 2em;
@@ -85,13 +87,14 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }  
-      .full-heart:hover{
+      .full-heart:active{
           opacity: 1;
-          &.empty-heart{
-              opacity: 0;
-          }
+          -webkit-animation: heart-full 0.1s ease;
+                  animation: heart-full 0.1s ease;
       }
-      
+      .empty-heart:active{
+        opacity: 0;
+    }
     }
 
 /**** page menu ****/
@@ -106,17 +109,25 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
 
     }
     @mixin description {
         display: flex;
         justify-content: space-between;
-        align-items: center;
         flex-direction: column;
         padding: 10px;
     }
-    
+    .price{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding: 0 15px 10px 0;
+    }    
     h5, p{
         margin: 0px;
     }
+
