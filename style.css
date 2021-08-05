@@ -1,6 +1,7 @@
 /**** couleurs ****/
 /**** fonts ****/
 /**** Breakpoints ****/
+/**** loader ****/
 /**** mixin pour les breakpoints ****/
 /**** mixin box-shadows ****/
 /**** mixins flexbox ****/
@@ -17,6 +18,34 @@ h5, p {
   margin: 0px;
 }
 
+@keyframes bouncing {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-150Px);
+  }
+}
+@keyframes loader-off {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.3;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
 @keyframes heart-full {
   0% {
     transform: scaleY(0);
@@ -126,6 +155,59 @@ h5 {
 }
 .btn:hover {
   opacity: 0.7;
+}
+
+.load {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 9999;
+  background: rgba(116, 116, 116, 0.8);
+  animation: loader-off 3s ease both;
+}
+.load .load__ball {
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+  box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.49);
+  -webkit-box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.49);
+  -moz-box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.49);
+  animation: bouncing 0.5s cubic-bezier(0.19, 0.57, 0.3, 0.98) infinite alternate;
+}
+.load .ball--2 {
+  animation-delay: 0.1s;
+  opacity: 0.5;
+}
+.load .ball--3 {
+  animation-delay: 0.2s;
+  opacity: 0.6;
+}
+.load .ball--4 {
+  animation-delay: 0.3s;
+  opacity: 0.7;
+}
+.load .ball--5 {
+  animation-delay: 0.4s;
+}
+.load .ball--1 {
+  background-color: #9356DC;
+}
+.load .ball--2 {
+  background-color: #FF79DA;
+}
+.load .ball--3 {
+  background-color: #99E2D0;
+}
+.load .ball--4 {
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+}
+.load .ball--5 {
+  background-color: #353535;
 }
 
 .header {
@@ -373,8 +455,6 @@ img {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
 }
 
@@ -388,6 +468,14 @@ img {
   justify-content: space-between;
   flex-direction: column;
   padding: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.descriptionh3, .description p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .bloc-menu:hover .check-box {

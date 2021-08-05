@@ -109,8 +109,6 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
-        white-space: nowrap;
-        text-overflow: ellipsis;
         overflow: hidden;
     }
 
@@ -126,8 +124,6 @@
         justify-content: flex-end;
         align-items: flex-end;
         padding: 0 15px 10px 0;
-    }    
-    h5, p{
-        margin: 0px;
-    }
+    }  
+    
 

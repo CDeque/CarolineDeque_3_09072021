@@ -1,3 +1,33 @@
+@keyframes bouncing {
+    from{
+        transform: translateY(0);
+
+    }
+    to{
+        transform: translateY(-150Px);
+    }
+}
+@keyframes loader-off {
+    0%{ 
+    opacity: 1;
+
+    }
+    25%{
+        opacity: 0.7;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    75%{
+        opacity: 0.3;
+    }
+    99%{
+    opacity: 0;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
 @keyframes heart-full{
     
     0%{
