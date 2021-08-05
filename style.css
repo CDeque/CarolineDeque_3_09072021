@@ -14,10 +14,6 @@
   padding: 0 15px 10px 0;
 }
 
-h5, p {
-  margin: 0px;
-}
-
 @keyframes bouncing {
   from {
     transform: translateY(0);
@@ -302,6 +298,13 @@ h5 {
 }
 .menu .pick:hover, .menu .choose:hover, .menu .eat:hover {
   background-color: #e4d5f6;
+}
+.menu .pick p, .menu .choose p, .menu .eat p {
+  margin: 0;
+}
+.menu .pick .icons, .menu .choose .icons, .menu .eat .icons {
+  font-size: 1.5rem;
+  margin-right: 10px;
 }
 
 .icons {
