@@ -13,6 +13,9 @@
   align-items: flex-end;
   padding: 0 15px 10px 0;
 }
+.price p {
+  margin-bottom: 0;
+}
 
 @keyframes bouncing {
   from {
@@ -163,7 +166,7 @@ h5 {
   height: 100%;
   position: fixed;
   z-index: 9999;
-  background: rgba(116, 116, 116, 0.8);
+  background: rgba(255, 255, 255, 0.8);
   animation: loader-off 3s ease both;
 }
 .load .load__ball {
@@ -475,10 +478,17 @@ img {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.descriptionh3, .description p {
+.description h3 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  margin-bottom: 0px;
+}
+.description p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 10px 0 0 0;
 }
 
 .bloc-menu:hover .check-box {
@@ -500,7 +510,7 @@ img {
   background-color: #99E2D0;
   color: #fff;
   border-radius: 0 1rem 1rem 0;
-  height: 80px;
+  height: 68px;
   width: 60px;
   padding: 0px;
   font-size: 30px;
