@@ -306,7 +306,7 @@ h5 {
   margin: 0;
 }
 .menu .pick .icons, .menu .choose .icons, .menu .eat .icons {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-right: 10px;
 }
 
@@ -518,6 +518,20 @@ img {
 .check-box .rotate-on-hover {
   height: 30px;
   width: 30px;
+}
+
+.price {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 0 15px 10px 0;
+}
+.price p {
+  margin-bottom: 0;
+}
+
+.price:hover {
+  margin-right: 75px;
 }
 
 .btn-command {

@@ -18,6 +18,8 @@ $font-text: 'Roboto', Verdana, Sans-Serif;
 /**** Breakpoints ****/
 $breakpoints:(
     mobile: 599px,
+    tablet: 600px,
+    desktop: 1024px,
 );
 
 /**** loader ****/

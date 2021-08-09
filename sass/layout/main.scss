@@ -45,7 +45,7 @@ main {
   .menu{
     @include flex__center;
     font-weight:bold;
-
+   
     & .pick, .choose, .eat{
         @include cards-menu;
         @include shadow-cards;
@@ -56,12 +56,14 @@ main {
             margin: 0;
         }
         .icons{
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             margin-right: 10px;
             
         }
     }
+    
     }
+    
     .icons{
             @include icons;   
             &:hover{
@@ -70,10 +72,11 @@ main {
         }
     .restaurants{
         background-color: $color-bg;
-        @include flex__center
+        @include flex__center;
     }
     .article{
         @include cards-restaurant;
+        
         .new{
                 display: flex;
                 color: $new;
@@ -88,6 +91,7 @@ main {
                 right: 2rem;
                 margin-top: 1rem;
             }
+          
     }
    
     /**** pages menu ****/
@@ -182,6 +186,7 @@ main {
         -webkit-animation: rotation-check 1s ease ;
                 animation: rotation-check 1s ease ;
     }
+ 
    
 }
 
@@ -197,7 +202,20 @@ main {
     .rotate-on-hover{
         height: 30px;
         width: 30px;
+        
     }
+}
+.price{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 0 15px 10px 0;
+    p{
+        margin-bottom: 0;
+    }
+}  
+.price:hover{
+    margin-right: 75px;
 }
 .btn-command{
     display: flex;
