@@ -125,7 +125,6 @@ article{
         border-radius: 1rem 1rem 0rem 0rem;
         width: 100%;
         height: 70%;
-        -o-object-fit: cover;
            object-fit: cover;
     }
     & .card-text{
@@ -158,7 +157,6 @@ article{
       }  
       .full-heart:active{
           opacity: 1;
-          -webkit-animation: heart-full 0.1s ease;
                   animation: heart-full 0.1s ease;
       }
       .empty-heart:active{

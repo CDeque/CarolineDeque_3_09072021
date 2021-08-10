@@ -114,7 +114,6 @@ main {
         }
         img{
             width: 100%;
-            -o-object-fit: cover;
                object-fit: cover;
             
         }
@@ -200,12 +199,10 @@ main {
 
  .bloc-menu:hover .check-box{
     @include flex__center;
-    -webkit-animation: slide-left 1s ease ;
             animation: slide-left 1s ease ;
     transform-origin: right;
    
     .rotate-on-hover{
-        -webkit-animation: rotation-check 1s ease ;
                 animation: rotation-check 1s ease ;
     }
  
