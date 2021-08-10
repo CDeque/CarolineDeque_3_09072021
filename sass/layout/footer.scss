@@ -7,7 +7,7 @@
     
     & P, .icons{
         padding-right: 10px;
-       margin: 5px 0px;
+       margin: 10px 0px;
      
     }
 }
@@ -18,6 +18,29 @@ i{
 /**** changement couleur logo ****/
 .logo__footer{
     filter: invert(100%);
-    width: 20%;
+    width: 7rem;
     margin: 20px 0px;
+
 }
+
+.footer-container{
+    @media only screen and (min-width: 600px) and (max-width: 1023px){
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    & P, .icons{
+        padding-right: 10px;
+       margin: 20px 0px;
+     
+    }
+    }
+    @media only screen and (min-width: 1024px){
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+        
+    }
+

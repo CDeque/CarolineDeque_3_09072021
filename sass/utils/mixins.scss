@@ -1,17 +1,18 @@
 /**** mixin pour les breakpoints ****/
 @mixin mobile-only {
-    @media screen and (max-width: map-get($breakpoints, mobile)){
+    @media only screen and (max-width: map-get($breakpoints, mobile)){
         width: 100%;
     }
 }
 @mixin tablet{
-    @media screen and (min-width: 600px) and (max-width: 1100px){
+    @media only screen and (min-width: 600px) and (max-width: 1023px){
     .menu{
         flex-direction: row;
         .pick, .choose, .eat{
             padding: 20px 35px;
             width: auto;
-            margin: 10px 25px;
+            margin: 10px 10px;
+            
         }
         .number{
             line-height: 21px;
@@ -20,6 +21,56 @@
             margin-left: -45px;
         }
     }    
+}
+}
+
+@mixin desktop{
+    @media only screen and (min-width: 1024px){
+    .menu{
+        flex-direction: row;
+        justify-content: space-around;
+
+        .pick, .choose, .eat{
+            padding: 20px 35px;
+            width: auto;
+            margin: 10px 10px;
+        }
+        .number{
+            line-height: 21px;
+            padding: 0px;
+            margin-top: 2px;
+            margin-left: -45px;
+        }
+    }   
+    .restaurants{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        a{
+            width: 49%;
+        }
+    } 
+
+article{
+    .new-1{
+        
+        left: 33rem;
+    }
+}
+    .restaurant-card{
+        display: flex;
+        justify-content: center;
+        .bloc-card{
+            width: 100%;
+        }
+        .container-card{
+            display: flex;
+            justify-content: space-around;
+        }
+        .btn-command{
+            margin-top: 30px;
+        }
+    }
 }
 }
 
@@ -54,7 +105,7 @@
     border-radius: 1rem;
     background-color: $color-bg;
     border: none;
-    padding: 20px 60px;
+    padding: 20px 30px;
     margin: 10px;
     width: 90%;
 }
@@ -137,14 +188,6 @@
         flex-direction: column;
         padding: 10px;
     }
-    .price{
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-        padding: 0 15px 10px 0;
-        p{
-            margin-bottom: 0;
-        }
-    }  
+    
     
 

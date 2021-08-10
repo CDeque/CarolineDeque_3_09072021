@@ -1,7 +1,7 @@
 main {
     @include mobile-only;
-   
-
+   @include tablet;
+    @include desktop;
 }
 .container-about{
     width: 100%;
@@ -30,7 +30,7 @@ main {
         line-height: 20px;
         border-radius: 50%;
         text-align: center;
-        margin-left: -70px;
+        margin-left: -41px;
         padding: 1px;
 
     }
@@ -49,6 +49,7 @@ main {
     & .pick, .choose, .eat{
         @include cards-menu;
         @include shadow-cards;
+        white-space: nowrap;
         &:hover{
             background-color: lighten($primary, 30%)
         }
@@ -77,7 +78,7 @@ main {
     .article{
         @include cards-restaurant;
         
-        .new{
+        .new-1,.new-2{
                 display: flex;
                 color: $new;
                 background-color: $terciary;
@@ -86,7 +87,6 @@ main {
                 height: 2.5rem;
                 justify-content: center;
                 align-items: center;
-                float: right;
                 position: absolute;
                 right: 2rem;
                 margin-top: 1rem;
@@ -118,16 +118,37 @@ main {
                object-fit: cover;
             
         }
-        .bloc-card{
-            Animation-name : fadein ;
-            Animation-duration : 5s ;
-            Animation-direction: normale;
-            Animation-iteration-count : 1;
-            .meal-1 .meal-2 .meal-3{
-                -webkit-animation-delay: 2s;
-                        animation-delay: 2s;
+        .bloc-menu{
+           animation: fadein 1s ease both;
             }
+            .meal-1{
+                animation-delay: 0.1s;
             }
+            .meal-2{
+                animation-delay: 0.2s;
+            }
+            .meal-3{
+                animation-delay: 0.3s;
+            }
+            .meal-4{
+                animation-delay: 0.4s;
+            }
+            .meal-5{
+                animation-delay: 0.5s;
+            }
+            .meal-6{
+                animation-delay: 0.6s;
+            }
+            .meal-7{
+                animation-delay: 0.7s;
+            }
+            .meal-8{
+                animation-delay: 0.8s;
+            }
+            .meal-9{
+                animation-delay: 0.9s;
+            }
+                
             .restaurants{
                 padding: 0px 20Px;
             }
@@ -162,6 +183,7 @@ main {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    width: 73%;
     h3{
         overflow: hidden;
         text-overflow: ellipsis;
@@ -214,9 +236,6 @@ main {
         margin-bottom: 0;
     }
 }  
-.price:hover{
-    margin-right: 75px;
-}
 .btn-command{
     display: flex;
     justify-content: center;

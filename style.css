@@ -7,16 +7,6 @@
 /**** mixins flexbox ****/
 /**** mixin cards ****/
 /**** page menu ****/
-.price {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding: 0 15px 10px 0;
-}
-.price p {
-  margin-bottom: 0;
-}
-
 @keyframes bouncing {
   from {
     transform: translateY(0);
@@ -64,18 +54,6 @@
     opacity: 1;
   }
 }
-.meal-1 {
-  transition-delay: 3s;
-}
-
-.meal-2 {
-  transition-delay: 5s;
-}
-
-.meal-3 {
-  transition-delay: 7s;
-}
-
 @keyframes slide-left {
   from {
     transform: scaleX(0);
@@ -234,9 +212,67 @@ h5 {
   color: #747474;
 }
 
-@media screen and (max-width: 599px) {
+@media only screen and (max-width: 599px) {
   main {
     width: 100%;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+  main .menu {
+    flex-direction: row;
+  }
+  main .menu .pick, main .menu .choose, main .menu .eat {
+    padding: 20px 35px;
+    width: auto;
+    margin: 10px 10px;
+  }
+  main .menu .number {
+    line-height: 21px;
+    padding: 0px;
+    margin-top: 2px;
+    margin-left: -45px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .menu {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  main .menu .pick, main .menu .choose, main .menu .eat {
+    padding: 20px 35px;
+    width: auto;
+    margin: 10px 10px;
+  }
+  main .menu .number {
+    line-height: 21px;
+    padding: 0px;
+    margin-top: 2px;
+    margin-left: -45px;
+  }
+  main .restaurants {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  main .restaurants a {
+    width: 49%;
+  }
+  main article .new-1 {
+    left: 33rem;
+  }
+  main .restaurant-card {
+    display: flex;
+    justify-content: center;
+  }
+  main .restaurant-card .bloc-card {
+    width: 100%;
+  }
+  main .restaurant-card .container-card {
+    display: flex;
+    justify-content: space-around;
+  }
+  main .restaurant-card .btn-command {
+    margin-top: 30px;
   }
 }
 
@@ -269,7 +305,7 @@ h5 {
   line-height: 20px;
   border-radius: 50%;
   text-align: center;
-  margin-left: -70px;
+  margin-left: -41px;
   padding: 1px;
 }
 
@@ -294,10 +330,11 @@ h5 {
   border-radius: 1rem;
   background-color: #F2F2F2;
   border: none;
-  padding: 20px 60px;
+  padding: 20px 30px;
   margin: 10px;
   width: 90%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
 }
 .menu .pick:hover, .menu .choose:hover, .menu .eat:hover {
   background-color: #e4d5f6;
@@ -377,7 +414,7 @@ h5 {
 .article .empty-heart:active {
   opacity: 0;
 }
-.article .new {
+.article .new-1, .article .new-2 {
   display: flex;
   color: #278870;
   background-color: #99E2D0;
@@ -386,14 +423,13 @@ h5 {
   height: 2.5rem;
   justify-content: center;
   align-items: center;
-  float: right;
   position: absolute;
   right: 2rem;
   margin-top: 1rem;
 }
 
 /**** pages menu ****/
-@media screen and (max-width: 599px) {
+@media only screen and (max-width: 599px) {
   .header .main .footer {
     width: 100%;
   }
@@ -419,15 +455,44 @@ img {
   object-fit: cover;
 }
 
-.bloc-card {
-  Animation-name: fadein;
-  Animation-duration: 5s;
-  Animation-direction: normale;
-  Animation-iteration-count: 1;
+.bloc-menu {
+  animation: fadein 1s ease both;
 }
-.bloc-card .meal-1 .meal-2 .meal-3 {
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
+
+.meal-1 {
+  animation-delay: 0.1s;
+}
+
+.meal-2 {
+  animation-delay: 0.2s;
+}
+
+.meal-3 {
+  animation-delay: 0.3s;
+}
+
+.meal-4 {
+  animation-delay: 0.4s;
+}
+
+.meal-5 {
+  animation-delay: 0.5s;
+}
+
+.meal-6 {
+  animation-delay: 0.6s;
+}
+
+.meal-7 {
+  animation-delay: 0.7s;
+}
+
+.meal-8 {
+  animation-delay: 0.8s;
+}
+
+.meal-9 {
+  animation-delay: 0.9s;
 }
 
 .restaurants {
@@ -477,6 +542,7 @@ img {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  width: 73%;
 }
 .description h3 {
   overflow: hidden;
@@ -530,10 +596,6 @@ img {
   margin-bottom: 0;
 }
 
-.price:hover {
-  margin-right: 75px;
-}
-
 .btn-command {
   display: flex;
   justify-content: center;
@@ -548,7 +610,7 @@ img {
 }
 .footer P, .footer .icons {
   padding-right: 10px;
-  margin: 5px 0px;
+  margin: 10px 0px;
 }
 
 i {
@@ -559,8 +621,27 @@ i {
 /**** changement couleur logo ****/
 .logo__footer {
   filter: invert(100%);
-  width: 20%;
+  width: 7rem;
   margin: 20px 0px;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+  .footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer-container P, .footer-container .icons {
+    padding-right: 10px;
+    margin: 20px 0px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
