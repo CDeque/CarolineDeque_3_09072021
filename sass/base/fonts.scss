@@ -5,18 +5,19 @@
 }
 h1{
     font-family: $font-title;
-    font-size: 1.7rem;
+    font-size: 2rem;
     font-style: italic;
 }
 p, span{
     font-family: $font-text;
     font-size: 1rem;
-    
+
 }
 h3{
     font-family: $font-text;
     font-size: 1rem;
     margin: 0px 0px 10px 0px;
+    font-weight: 900;
 }
 h5{
     font-family: $font-text;

@@ -112,9 +112,10 @@ main {
            color:$icons;
         }
         }
-        img{
+        .img-menu{
             width: 100%;
-               object-fit: cover;
+            object-fit: cover;
+            height: 280px;
             
         }
         .bloc-menu{
@@ -201,6 +202,7 @@ main {
     @include flex__center;
             animation: slide-left 1s ease ;
     transform-origin: right;
+    margin-left: -55px;
    
     .rotate-on-hover{
                 animation: rotation-check 1s ease ;
@@ -229,10 +231,12 @@ main {
     justify-content: flex-end;
     align-items: flex-end;
     padding: 0 15px 10px 0;
+    margin-right: 10px;
     p{
         margin-bottom: 0;
     }
 }  
+
 .btn-command{
     display: flex;
     justify-content: center;
