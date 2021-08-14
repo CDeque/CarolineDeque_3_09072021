@@ -183,7 +183,7 @@ main {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 73%;
+    flex: 1;
     h3{
         overflow: hidden;
         text-overflow: ellipsis;
@@ -202,7 +202,7 @@ main {
     @include flex__center;
             animation: slide-left 1s ease ;
     transform-origin: right;
-    margin-left: -55px;
+    
    
     .rotate-on-hover{
                 animation: rotation-check 1s ease ;
@@ -236,6 +236,10 @@ main {
         margin-bottom: 0;
     }
 }  
+.price:hover{
+    transition: 0.5s ease;
+    padding-right: 20px;
+}
 
 .btn-command{
     display: flex;

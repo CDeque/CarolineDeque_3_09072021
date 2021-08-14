@@ -50,10 +50,10 @@
   @keyframes slide-left {
       from{
           transform: scaleX(0)
-      }
-      to{
-          transform: scalex(1);
-      }
+        }
+        to{
+            transform: scaleX(1);
+        }
       
   }
   @keyframes rotation-check {
