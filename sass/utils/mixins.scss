@@ -1,207 +1,203 @@
 /**** mixin pour les breakpoints ****/
 @mixin mobile-only {
-    @media only screen and (max-width: map-get($breakpoints, mobile)){
-        width: 100%;
+  @media only screen and (max-width: map-get($breakpoints, mobile)) {
+    width: 100%;
+  }
+}
+@mixin tablet {
+  @media only screen and (min-width: 600px) and (max-width: 1023px) {
+    .menu {
+      flex-direction: row;
+      .pick,
+      .choose,
+      .eat {
+        padding: 20px 35px;
+        width: auto;
+        margin: 10px 10px;
+      }
+      .number {
+        line-height: 21px;
+        padding: 0px;
+        margin-top: 2px;
+        margin-left: -45px;
+      }
     }
-}
-@mixin tablet{
-    @media only screen and (min-width: 600px) and (max-width: 1023px){
-    .menu{
-        flex-direction: row;
-        .pick, .choose, .eat{
-            padding: 20px 35px;
-            width: auto;
-            margin: 10px 10px;
-            
-        }
-        .number{
-            line-height: 21px;
-            padding: 0px;
-            margin-top: 2px;
-            margin-left: -45px;
-        }
-    }  
-    .img-menu{
-        height: 400px;
-    }  
-}
+    .img-menu {
+      height: 400px;
+    }
+  }
 }
 
-@mixin desktop{
-    @media only screen and (min-width: 1024px){
-    .menu{
-        flex-direction: row;
-        justify-content: space-around;
+@mixin desktop {
+  @media only screen and (min-width: 1024px) {
+    .menu {
+      flex-direction: row;
+      justify-content: space-around;
 
-        .pick, .choose, .eat{
-            padding: 20px 35px;
-            width: auto;
-            margin: 10px 10px;
-        }
-        .number{
-            line-height: 21px;
-            padding: 0px;
-            margin-top: 2px;
-            margin-left: -45px;
-        }
-    }   
-    .restaurants{
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        a{
-            width: 49%;
-        }
-    } 
+      .pick,
+      .choose,
+      .eat {
+        padding: 20px 35px;
+        width: auto;
+        margin: 10px 10px;
+      }
+      .number {
+        line-height: 21px;
+        padding: 0px;
+        margin-top: 2px;
+        margin-left: -45px;
+      }
+    }
+    .restaurants {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      a {
+        width: 49%;
+      }
+    }
 
-article{
-    .new-1{
-        
+    article {
+      .new-1 {
         left: 33rem;
+      }
     }
-}
-    .restaurant-card{
+    .restaurant-card {
+      display: flex;
+      justify-content: center;
+      .bloc-card {
+        width: 100%;
+      }
+      .container-card {
         display: flex;
-        justify-content: center;
-        .bloc-card{
-            width: 100%;
-        }
-        .container-card{
-            display: flex;
-            justify-content: space-around;
-        }
-       
-        .btn-command{
-            margin-top: 30px;
-        }
-    }
-    .menu-card{
-        width: 30%;
-    }
-    .img-menu{
-        height: 700px;
-    }
-}
-}
+        justify-content: space-around;
+      }
 
+      .btn-command {
+        margin-top: 30px;
+      }
+    }
+    .menu-card {
+      width: 30%;
+    }
+    .img-menu {
+      height: 700px;
+    }
+  }
+}
 
 /**** mixin box-shadows ****/
 
 @mixin shadow-gps {
-    box-shadow: inset 0px 2px 3px rgba(0,0,0,0.20);
+  box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.2);
 }
 
 @mixin shadow-cards {
-    box-shadow: 0px 4px 4px rgba(0,0,0,0.20);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
 /**** mixins flexbox ****/
 
 @mixin flex__center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 @mixin flex__title {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 /**** mixin cards ****/
 @mixin cards-menu {
-    border-radius: 1rem;
-    background-color: $color-bg;
-    border: none;
-    padding: 20px 30px;
-    margin: 10px;
-    width: 90%;
+  border-radius: 1rem;
+  background-color: $color-bg;
+  border: none;
+  padding: 20px 30px;
+  margin: 10px;
+  width: 90%;
 }
-@mixin icons{
-    margin: 0px 10px;
-    color: $icons;
+@mixin icons {
+  margin: 0px 10px;
+  color: $icons;
 }
 
-@mixin cards-restaurant{
-    background-color: $white;
-    border-radius: 1rem;
+@mixin cards-restaurant {
+  background-color: $white;
+  border-radius: 1rem;
+  width: 100%;
+  height: 18rem;
+  margin: 15px 0px;
+  @include shadow-cards;
+  & img {
+    border-radius: 1rem 1rem 0rem 0rem;
     width: 100%;
-    height: 18rem;
-    margin: 15px 0px;
-    @include shadow-cards;
-    & img{
-        border-radius: 1rem 1rem 0rem 0rem;
-        width: 100%;
-        height: 70%;
-           object-fit: cover;
-    }
-    & .card-text{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 10px 20px;
-        color: #000;
-    }
-    .empty-heart{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 2em;
-        margin-top: 20px;
-        
-        width: 40px;
-        height: 40px;
-        }
-      .full-heart{
-          opacity: 0;
-          cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 2.1em;
-        margin: -40px 0 0 0px;
-        width: 40px;
-        height: 40px;
-        background: -webkit-linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }  
-      .full-heart:hover{
-        opacity: 1;
-        animation: heart-full 900ms both;
-        
+    height: 70%;
+    object-fit: cover;
+  }
+  & .card-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+    color: #000;
+  }
+  .empty-heart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    margin-top: 20px;
 
-        font-size: 2.2em;
-        
-        
-      }
-  
-    }
+    width: 40px;
+    height: 40px;
+  }
+  .full-heart {
+    opacity: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.1em;
+    margin: -41px 0 0 0px;
+    width: 40px;
+    height: 40px;
+    background: -webkit-linear-gradient(
+      180deg,
+      rgba(255, 121, 218, 1) 0%,
+      rgba(147, 86, 220, 1) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .full-heart:hover {
+    opacity: 1;
+    animation: heart-full 900ms both;
+
+    font-size: 2.2em;
+  }
+}
 
 /**** page menu ****/
 @mixin menu--card {
-
-    .bloc-menu{
-        border-radius: 1rem;
-        background-color: $white;
-        border: none;
-        margin: 10px 0px;
-        padding: 0px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        overflow: hidden;
-    }
-
-    }
-    @mixin description {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        padding: 10px;
-    }
-    
-    
-
+  .bloc-menu {
+    border-radius: 1rem;
+    background-color: $white;
+    border: none;
+    margin: 10px 0px;
+    padding: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+}
+@mixin description {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 10px;
+}
