@@ -257,7 +257,7 @@ h5 {
   main .menu .pick,
 main .menu .choose,
 main .menu .eat {
-    padding: 20px 35px;
+    padding: 20px 10px;
     width: auto;
     margin: 10px 10px;
   }
@@ -265,7 +265,7 @@ main .menu .eat {
     line-height: 21px;
     padding: 0px;
     margin-top: 2px;
-    margin-left: -45px;
+    margin-left: -20px;
   }
   main .img-menu {
     height: 400px;
