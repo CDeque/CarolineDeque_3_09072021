@@ -1,277 +1,275 @@
 main {
-    @include mobile-only;
-   @include tablet;
-    @include desktop;
+  @include mobile-only;
+  @include tablet;
+  @include desktop;
 }
-.container-about{
-    width: 100%;
-    background-color: $color-bg;
-   
+.container-about {
+  width: 100%;
+  background-color: $color-bg;
 }
-.about{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px 0;
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
 }
-.presentation{
-    text-align: center;
-    padding: 0px 30px;
-        & h2, p{
-       margin: 10px; 
-    }
-    }
-    .number{
-        float: left;
-        background-color: $primary;
-        color: $white;
-        width: 21px;
-        height: 21px;
-        line-height: 20px;
-        border-radius: 50%;
-        text-align: center;
-        margin-left: -41px;
-        padding: 1px;
-
-    }
-  .container_1, .container_2{
-      width: 100%;
-      .title-container{
-          @include flex__title;
-          padding: 0px 20px;
-      }
+.presentation {
+  text-align: center;
+  padding: 0px 30px;
+  & h2,
+  p {
+    margin: 10px;
   }
-
-  .menu{
-    @include flex__center;
-    font-weight:bold;
-   
-    & .pick, .choose, .eat{
-        @include cards-menu;
-        @include shadow-cards;
-        white-space: nowrap;
-        &:hover{
-            background-color: lighten($primary, 30%)
-        }
-        p{
-            margin: 0;
-        }
-        .icons{
-            font-size: 1.3rem;
-            margin-right: 10px;
-            
-        }
-    }
-    
-    }
-    
-    .icons{
-            @include icons;   
-            &:hover{
-                color: $primary;
-            }
-        }
-    .restaurants{
-        background-color: $color-bg;
-        @include flex__center;
-    }
-    .article{
-        @include cards-restaurant;
-        
-        .new-1,.new-2{
-                display: flex;
-                color: $new;
-                background-color: $terciary;
-                border-radius: 5px;
-                width: 5rem;
-                height: 2.5rem;
-                justify-content: center;
-                align-items: center;
-                position: absolute;
-                right: 2rem;
-                margin-top: 1rem;
-            }
-          
-    }
-   
-    /**** pages menu ****/
-    .header .main .footer{
-        @include mobile-only;
-     } 
-     .header{
-        background-color: $white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        & .arrow{
-            position: absolute;
-            left: 30px;
-            font-size: 1.5rem;
-           top: 2%;
-           color:$icons;
-        }
-        }
-        .img-menu{
-            width: 100%;
-            object-fit: cover;
-            height: 280px;
-            
-        }
-        .bloc-card{
-            .empty-heart{
-                opacity: 1;
-                display: flex;
-                align-items: baseline;
-                font-size: 2em;
-                padding: 20px 0;
-                width: 40px;
-                height: 40px;
-                }
-                .empty-heart:hover{
-                    opacity: 0;
-                }
-            .full-heart{
-                opacity: 0;
-                cursor: pointer;
-              display: flex;
-              align-items: baseline;
-              font-size: 2.1em;
-              margin: -20px 0 0 0px;
-              width: 40px;
-              height: 40px;
-              background: -webkit-linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
-            }  
-            .full-heart:hover{
-              opacity: 1;
-              animation: heart-full 900ms  ease both;
-              
-      
-              font-size: 2.2em;
-              margin: -22px 0 0 -2px;
-              
-            }
-
-        }
-        .bloc-menu{
-           animation: fadein 1s ease both;
-            }
-            .meal-1{
-                animation-delay: 0.1s;
-            }
-            .meal-2{
-                animation-delay: 0.2s;
-            }
-            .meal-3{
-                animation-delay: 0.3s;
-            }
-            .meal-4{
-                animation-delay: 0.4s;
-            }
-            .meal-5{
-                animation-delay: 0.5s;
-            }
-            .meal-6{
-                animation-delay: 0.6s;
-            }
-            .meal-7{
-                animation-delay: 0.7s;
-            }
-            .meal-8{
-                animation-delay: 0.8s;
-            }
-            .meal-9{
-                animation-delay: 0.9s;
-            }
-                
-            .restaurants{
-                padding: 0px 20Px;
-            }
-.restaurant-card{
-    z-index: 1;
-    margin-top: -4rem;
-    position: relative ;
-    background-color: $color-bg;
-    border-radius: 2rem 2rem 0rem 0rem;
-    padding: 10px 20px;
-    width: 100%;
-    .title-heart{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px;
-        & .heart{
-            font-size: 1.6em;
-        }
-    }    
-    .menu-card{
-        @include menu--card;
-
-    }
 }
-.menu-title h5{
-    border-bottom: solid 3px $terciary;
-    width: 50px;
+.number {
+  float: left;
+  background-color: $primary;
+  color: $white;
+  width: 21px;
+  height: 21px;
+  line-height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  margin-left: -41px;
+  padding: 1px;
 }
-.description{
-    @include description;
+.container_1,
+.container_2 {
+  width: 100%;
+  .title-container {
+    @include flex__title;
+    padding: 0px 20px;
+  }
+}
+
+.menu {
+  @include flex__center;
+  font-weight: bold;
+
+  & .pick,
+  .choose,
+  .eat {
+    @include cards-menu;
+    @include shadow-cards;
+    white-space: nowrap;
+    &:hover {
+      background-color: lighten($primary, 30%);
+    }
+    p {
+      margin: 0;
+    }
+    .icons {
+      font-size: 1.3rem;
+      margin-right: 10px;
+    }
+  }
+}
+
+.icons {
+  @include icons;
+  &:hover {
+    color: $primary;
+  }
+}
+.restaurants {
+  background-color: $color-bg;
+  @include flex__center;
+}
+.article {
+  @include cards-restaurant;
+
+  .new-1,
+  .new-2 {
+    display: flex;
+    color: $new;
+    background-color: $terciary;
+    border-radius: 5px;
+    width: 5rem;
+    height: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+/**** pages menu ****/
+.header .main .footer {
+  @include mobile-only;
+}
+.header {
+  background-color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & .arrow {
+    position: absolute;
+    left: 30px;
+    font-size: 1.5rem;
+    top: 2%;
+    color: $icons;
+  }
+}
+.img-menu {
+  width: 100%;
+  object-fit: cover;
+  height: 280px;
+}
+.bloc-card {
+  .empty-heart {
+    opacity: 1;
+    display: flex;
+    align-items: baseline;
+    font-size: 2em;
+    padding: 20px 0;
+    width: 40px;
+    height: 40px;
+  }
+  .empty-heart:hover {
+    opacity: 0;
+  }
+  .full-heart {
+    opacity: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: baseline;
+    font-size: 2.1em;
+    margin: -20px 0 0 0px;
+    width: 40px;
+    height: 40px;
+    background: -webkit-linear-gradient(
+      180deg,
+      rgba(255, 121, 218, 1) 0%,
+      rgba(147, 86, 220, 1) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .full-heart:hover {
+    opacity: 1;
+    animation: heart-full 900ms ease both;
+
+    font-size: 2.2em;
+    margin: -22px 0 0 -2px;
+  }
+}
+.bloc-menu {
+  animation: fadein 1s ease both;
+}
+.meal-1 {
+  animation-delay: 0.1s;
+}
+.meal-2 {
+  animation-delay: 0.2s;
+}
+.meal-3 {
+  animation-delay: 0.3s;
+}
+.meal-4 {
+  animation-delay: 0.4s;
+}
+.meal-5 {
+  animation-delay: 0.5s;
+}
+.meal-6 {
+  animation-delay: 0.6s;
+}
+.meal-7 {
+  animation-delay: 0.7s;
+}
+.meal-8 {
+  animation-delay: 0.8s;
+}
+.meal-9 {
+  animation-delay: 0.9s;
+}
+
+.restaurants {
+  padding: 0px 20px;
+}
+.restaurant-card {
+  z-index: 1;
+  margin-top: -4rem;
+  position: relative;
+  background-color: $color-bg;
+  border-radius: 2rem 2rem 0rem 0rem;
+  padding: 10px 20px;
+  width: 100%;
+  .title-heart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    & .heart {
+      font-size: 1.6em;
+    }
+  }
+  .menu-card {
+    @include menu--card;
+  }
+}
+.menu-title h5 {
+  border-bottom: solid 3px $terciary;
+  width: 50px;
+}
+.description {
+  @include description;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+  h3 {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    flex: 1;
-    h3{
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        margin-bottom: 0px;
-    }
-    p{
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        margin: 10px 0 0 0;
-    }
-    }
+    margin-bottom: 0px;
+  }
+  p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 10px 0 0 0;
+  }
+}
 
- .bloc-menu:hover .check-box{
-    @include flex__center;
-            animation: slide-left 1s ease ;
-    transform-origin: right;
-    .rotate-on-hover{
-                animation: rotation-check 1s ease ;
-    } 
+.bloc-menu:hover .check-box {
+  @include flex__center;
+  animation: slide-left 1s ease;
+  transform-origin: right;
+  .rotate-on-hover {
+    animation: rotation-check 1s ease;
+  }
 }
-.bloc-menu:hover .price{
-        animation: slide-left 0.9s ease both;    
+.bloc-menu:hover .price {
+  animation: slide-left 0.9s ease both;
 }
-.check-box{
-    display: none;
-    background-color: $terciary;
-    color: $white;
-    border-radius: 0 1rem 1rem 0;
-    height: 68px;
-    width: 60px;
-    padding: 0px;
-    font-size: 30px;
-    .rotate-on-hover{
-        height: 30px;
-        width: 30px;
-        
-    }
+.check-box {
+  display: none;
+  background-color: $terciary;
+  color: $white;
+  border-radius: 0 1rem 1rem 0;
+  height: 68px;
+  width: 60px;
+  padding: 0px;
+  font-size: 30px;
+  .rotate-on-hover {
+    height: 30px;
+    width: 30px;
+  }
 }
-.price{
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding: 0 10px 10px 0;
-    p{
-        margin-bottom: 0;
-    }
-}  
+.price {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 0 10px 10px 0;
+  p {
+    margin-bottom: 0;
+  }
+}
 
-.btn-command{
-    display: flex;
-    justify-content: center;
+.btn-command {
+  display: flex;
+  justify-content: center;
 }
