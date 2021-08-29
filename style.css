@@ -297,26 +297,26 @@ main .menu .eat {
   main .restaurants a {
     width: 49%;
   }
-}
-main .restaurant-card {
-  display: flex;
-  justify-content: center;
-}
-main .restaurant-card .bloc-card {
-  width: 100%;
-}
-main .restaurant-card .container-card {
-  display: flex;
-  justify-content: space-around;
-}
-main .restaurant-card .btn-command {
-  margin-top: 30px;
-}
-main .menu-card {
-  width: 30%;
-}
-main .img-menu {
-  height: 700px;
+  main .restaurant-card {
+    display: flex;
+    justify-content: center;
+  }
+  main .restaurant-card .bloc-card {
+    width: 100%;
+  }
+  main .restaurant-card .container-card {
+    display: flex;
+    justify-content: space-around;
+  }
+  main .restaurant-card .btn-command {
+    margin-top: 30px;
+  }
+  main .menu-card {
+    width: 30%;
+  }
+  main .img-menu {
+    height: 700px;
+  }
 }
 
 .container-about {

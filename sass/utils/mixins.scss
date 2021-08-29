@@ -56,27 +56,28 @@
         width: 49%;
       }
     }
-  }
-  .restaurant-card {
-    display: flex;
-    justify-content: center;
-    .bloc-card {
-      width: 100%;
-    }
-    .container-card {
-      display: flex;
-      justify-content: space-around;
-    }
 
-    .btn-command {
-      margin-top: 30px;
+    .restaurant-card {
+      display: flex;
+      justify-content: center;
+      .bloc-card {
+        width: 100%;
+      }
+      .container-card {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .btn-command {
+        margin-top: 30px;
+      }
     }
-  }
-  .menu-card {
-    width: 30%;
-  }
-  .img-menu {
-    height: 700px;
+    .menu-card {
+      width: 30%;
+    }
+    .img-menu {
+      height: 700px;
+    }
   }
 }
 
