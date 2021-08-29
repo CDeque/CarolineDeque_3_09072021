@@ -3,10 +3,13 @@
 /**** Breakpoints ****/
 /**** loader ****/
 /**** mixin pour les breakpoints ****/
+/**** version tablette ****/
+/**** Version Desktop ****/
 /**** mixin box-shadows ****/
 /**** mixins flexbox ****/
 /**** mixin cards ****/
 /**** page menu ****/
+/**** Animation Loader ****/
 @keyframes bouncing {
   from {
     transform: translateY(0);
@@ -35,6 +38,7 @@
     visibility: hidden;
   }
 }
+/**** Animation Coeurs ****/
 @keyframes heart-full {
   0% {
     transform: scaleY(0.5);
@@ -43,6 +47,7 @@
     transform: scaleY(1);
   }
 }
+/**** Animation Apparition du menu ****/
 @keyframes fadein {
   0% {
     opacity: 0;
@@ -51,6 +56,7 @@
     opacity: 1;
   }
 }
+/**** Animation CheckBox ****/
 @-webkit-keyframes slide-left {
   0% {
     -webkit-transform: scaleX(0.4);
@@ -205,13 +211,13 @@ h5 {
   animation-delay: 0.4s;
 }
 .load .ball--1 {
-  background-color: #9356DC;
+  background-color: #9356dc;
 }
 .load .ball--2 {
-  background-color: #FF79DA;
+  background-color: #ff79da;
 }
 .load .ball--3 {
-  background-color: #99E2D0;
+  background-color: #99e2d0;
 }
 .load .ball--4 {
   background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
@@ -232,7 +238,7 @@ h5 {
 }
 
 .gps {
-  background-color: #E4E4E4;
+  background-color: #e4e4e4;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -321,7 +327,7 @@ main .menu .eat {
 
 .container-about {
   width: 100%;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 
 .about {
@@ -342,7 +348,7 @@ main .menu .eat {
 
 .number {
   float: left;
-  background-color: #9356DC;
+  background-color: #9356dc;
   color: #fff;
   width: 21px;
   height: 21px;
@@ -376,7 +382,7 @@ main .menu .eat {
 .menu .choose,
 .menu .eat {
   border-radius: 1rem;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   border: none;
   padding: 20px 30px;
   margin: 10px;
@@ -406,11 +412,11 @@ main .menu .eat {
   color: #747474;
 }
 .icons:hover {
-  color: #9356DC;
+  color: #9356dc;
 }
 
 .restaurants {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -471,7 +477,7 @@ main .menu .eat {
 .article .new-2 {
   display: flex;
   color: #278870;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   border-radius: 5px;
   width: 5rem;
   height: 2.5rem;
@@ -589,7 +595,7 @@ main .menu .eat {
   z-index: 1;
   margin-top: -4rem;
   position: relative;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   border-radius: 2rem 2rem 0rem 0rem;
   padding: 10px 20px;
   width: 100%;
@@ -616,7 +622,7 @@ main .menu .eat {
 }
 
 .menu-title h5 {
-  border-bottom: solid 3px #99E2D0;
+  border-bottom: solid 3px #99e2d0;
   width: 50px;
 }
 
@@ -661,7 +667,7 @@ main .menu .eat {
 
 .check-box {
   display: none;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   color: #fff;
   border-radius: 0 1rem 1rem 0;
   height: 68px;

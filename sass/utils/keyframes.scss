@@ -1,3 +1,5 @@
+/**** Animation Loader ****/
+
 @keyframes bouncing {
   from {
     transform: translateY(0);
@@ -6,6 +8,7 @@
     transform: translateY(-150px);
   }
 }
+
 @keyframes loader-off {
   0% {
     opacity: 1;
@@ -26,6 +29,7 @@
     visibility: hidden;
   }
 }
+/**** Animation Coeurs ****/
 @keyframes heart-full {
   0% {
     transform: scaleY(0.5);
@@ -34,6 +38,8 @@
     transform: scaleY(1);
   }
 }
+
+/**** Animation Apparition du menu ****/
 @keyframes fadein {
   0% {
     opacity: 0;
@@ -42,7 +48,7 @@
     opacity: 1;
   }
 }
-
+/**** Animation CheckBox ****/
 @-webkit-keyframes slide-left {
   0% {
     -webkit-transform: scaleX(0.4);

@@ -4,6 +4,7 @@
     width: 100%;
   }
 }
+/**** version tablette ****/
 @mixin tablet {
   @media only screen and (min-width: 600px) and (max-width: 1023px) {
     .menu {
@@ -27,7 +28,7 @@
     }
   }
 }
-
+/**** Version Desktop ****/
 @mixin desktop {
   @media only screen and (min-width: 1024px) {
     .menu {
