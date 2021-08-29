@@ -40,11 +40,17 @@ main {
     @include flex__title;
     padding: 0px 20px;
   }
+  .title-container_2 {
+    @include flex__title;
+    background-color: $color-bg;
+    padding: 0px 20px;
+  }
 }
 
 .menu {
   @include flex__center;
   font-weight: bold;
+  margin-bottom: 30px;
 
   & .pick,
   .choose,
@@ -74,6 +80,7 @@ main {
 .restaurants {
   background-color: $color-bg;
   @include flex__center;
+  padding: 0px 20px 50px 20px;
 }
 .article {
   @include cards-restaurant;
@@ -184,10 +191,6 @@ main {
 }
 .meal-9 {
   animation-delay: 0.9s;
-}
-
-.restaurants {
-  padding: 0px 20px;
 }
 .restaurant-card {
   z-index: 1;

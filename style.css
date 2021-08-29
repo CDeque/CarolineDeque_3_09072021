@@ -370,6 +370,14 @@ main .menu .eat {
   align-items: flex-start;
   padding: 0px 20px;
 }
+.container_1 .title-container_2,
+.container_2 .title-container_2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #f2f2f2;
+  padding: 0px 20px;
+}
 
 .menu {
   display: flex;
@@ -377,6 +385,7 @@ main .menu .eat {
   align-items: center;
   justify-content: center;
   font-weight: bold;
+  margin-bottom: 30px;
 }
 .menu .pick,
 .menu .choose,
@@ -421,6 +430,7 @@ main .menu .eat {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0px 20px 50px 20px;
 }
 
 .article {
@@ -585,10 +595,6 @@ main .menu .eat {
 
 .meal-9 {
   animation-delay: 0.9s;
-}
-
-.restaurants {
-  padding: 0px 20px;
 }
 
 .restaurant-card {
